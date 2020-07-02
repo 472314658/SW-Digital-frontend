@@ -1,0 +1,12 @@
+<nz-layout class="app-layout">
+  <app-header></app-header>
+  <nz-layout>
+    <nz-sider nzCollapsible [(nzCollapsed)]="menu.isCollapsed" [nzTrigger]="null" nzTheme="light" [nzWidth]="100">
+      <app-menu #menu></app-menu>
+    </nz-sider>
+    <nz-content>
+      <ng-content></ng-content>
+    </nz-content>
+  </nz-layout>
+<!--  <app-footer></app-footer>-->
+</nz-layout>

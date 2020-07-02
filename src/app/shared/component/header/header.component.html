@@ -1,0 +1,65 @@
+<div nz-row nzJustify="space-between" nzAlign="middle">
+  <img src="../../../../assets/123.png" alt="" style="width:100px">
+  <div nz-col nzSpan="18">
+    <form nz-form>
+      <nz-form-item>
+        <div nz-row nzJustify="start" nzAlign="middle" style="width: 100%">
+          <div nz-col nzSpan="5">
+            <div nz-row>
+              <nz-form-label [nzSpan]="8" nzFor="email">公司名称</nz-form-label>
+              <nz-form-control [nzSpan]="16">
+                <nz-input-group [nzPrefix]="searchIconTemplate">
+                  <input type="text" nz-input placeholder="请输入公司名称"/>
+                </nz-input-group>
+                <ng-template #searchIconTemplate><i nz-icon nzType="search"></i></ng-template>
+              </nz-form-control>
+            </div>
+          </div>
+          <div nz-col nzSpan="4">
+            <div nz-row>
+              <nz-form-label [nzSpan]="10" nzFor="email">时间</nz-form-label>
+              <nz-form-control [nzSpan]="14">
+                <nz-date-picker
+                  [nzMode]="dateMode"
+                  nzShowTime>
+                </nz-date-picker>
+              </nz-form-control>
+            </div>
+          </div>
+          <div nz-col nzSpan="7">
+            <div nz-row>
+              <nz-form-label [nzSpan]="12" nzFor="email">对比电力生产方式</nz-form-label>
+              <nz-form-control [nzSpan]="12">
+                  <nz-select ngModel="dateMode" nzPlaceHolder="电力生产方式">
+                    <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+                    <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                    <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+                  </nz-select>
+              </nz-form-control>
+            </div>
+          </div>
+          <div nz-col nzSpan="2">
+            <div nz-row>
+              <button nz-button nzType="primary">搜索</button>
+            </div>
+          </div>
+          <div nz-col nzSpan="6">
+            <div nz-row>
+              <nz-form-control [nzSpan]="12">
+                <nz-input-group [nzPrefix]="searchIconTemplate">
+                  <input type="text" nz-input placeholder="请输入指标名称"/>
+                </nz-input-group>
+                <ng-template #searchIconTemplate><i nz-icon nzType="search"></i></ng-template>
+              </nz-form-control>
+            </div>
+          </div>
+        </div>
+      </nz-form-item>
+    </form>
+  </div>
+  <div nz-col nzSpan="3">
+    <div nz-row nzJustify="end">
+      <nz-avatar [nzShape]="'square'" [nzSize]="64" [nzIcon]="'user'"></nz-avatar>
+    </div>
+  </div>
+</div>
